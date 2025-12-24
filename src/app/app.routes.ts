@@ -7,7 +7,15 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'todo',
     pathMatch: 'full',
+  },
+  {
+    path: 'todo',
+    loadComponent: () => import('./pages/todo/todo.page').then( m => m.TodoPage)
+  },
+  {
+    path: 'categories',
+    loadComponent: () => import('./pages/categories/categories.page').then( m => m.CategoriesPage)
   },
 ];
