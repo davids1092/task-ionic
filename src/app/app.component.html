@@ -11,7 +11,7 @@
     <ion-content>
       <ion-list>
 
-        <ion-menu-toggle auto-hide="true">
+        <ion-menu-toggle auto-hide="true" *ngIf="fireBaseConfig.taskEditEnabled">
           <ion-item routerLink="/todo" routerDirection="root">
             <ion-icon name="flash-outline" slot="start"></ion-icon>
             
@@ -20,7 +20,7 @@
         </ion-menu-toggle>
 
 
-        <ion-menu-toggle auto-hide="true">
+        <ion-menu-toggle auto-hide="true" *ngIf="fireBaseConfig.categoriesEnabled">
           <ion-item routerLink="/categories" routerDirection="root">
             <ion-icon name="folder-outline" slot="start"></ion-icon>
             <ion-label>Categorías</ion-label>

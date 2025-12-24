@@ -24,7 +24,6 @@ export class CategoryService {
 }
 
   getCategories(): Category[] {
-    console.log('Categories:', this.categories);
     return this.categories;
   }
 
